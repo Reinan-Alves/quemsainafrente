@@ -1,0 +1,45 @@
+<ion-content [fullscreen]="true">
+  <div *ngIf="spinner" class="spinner">
+    <ion-img  src="/assets/spinner.gif"></ion-img>
+  </div>
+  <div *ngIf="!spinner" id="container">
+    <div class="tabela">
+      <p><strong>Total de votos: {{totalDeVotos}}</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Candidato</th>
+            <th>Percentual</th>
+            <th>Colocação</th>
+          </tr>
+        </thead>
+
+        <tr *ngFor="let candidato of listaDeCandidatos">
+          <td>{{candidato.nome}}</td>
+          <td ngClass="tdPercentual">--</td>
+          <td ngClass="tdColocacao">--</td>
+        </tr>
+      </table>
+    </div>
+
+    <p style="margin:10px;">
+      <strong style="color: rgb(0, 0, 0);"
+        >Qual Candidato representará o Brasil pelos próximos 4 anos?</strong
+      >
+    </p>
+
+    <ion-list>
+      <ion-radio-group #respostaGroup>
+        <ion-item *ngFor="let candidato of listaDeCandidatos">
+          <p style="color: black"><strong>{{candidato.nome}}</strong></p>
+          <ion-radio slot="start" (click)="habilitado = true" value="{{candidato.id}}"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <div class="enviar">
+      <ion-button (click)="registrarVoto(respostaGroup.value)" disabled={{!habilitado}}>Enviar</ion-button>
+    </div>
+
+    <div class="publicidade"></div>
+  </div>
+</ion-content>

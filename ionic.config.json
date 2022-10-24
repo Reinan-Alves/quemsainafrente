@@ -1,0 +1,7 @@
+{
+  "name": "quemsainafrente",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

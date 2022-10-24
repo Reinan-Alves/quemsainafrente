@@ -1,0 +1,66 @@
+#container {
+  text-align: center;
+  //background: url("/assets/backbrasil.jpg") no-repeat center/cover fixed;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #000000;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+canvas {
+  transform: scale(0.5);
+}
+table {
+  width: 100%;
+  margin-bottom: 0.5em;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin: auto;
+  position: relative;
+}
+th,
+td {
+  padding: 0.7em;
+  margin: 0;
+  border: 1px solid rgb(0, 0, 0);
+  text-align: center;
+  height: 100px;
+}
+td {
+  height: 50px;
+}
+th {
+  background-color: #1b85ff;
+  height: 40px;
+}
+.tabela {
+  width: 100%;
+  background-color: #ffffff;
+}
+.spinner{
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
