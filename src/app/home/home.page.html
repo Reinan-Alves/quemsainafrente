@@ -1,6 +1,9 @@
+<ion-header [translucent]="true">
+  <ion-title class="tema"><strong>Quem sai na frente Pesquisas</strong></ion-title>
+</ion-header>
 <ion-content [fullscreen]="true">
   <div *ngIf="spinner" class="spinner">
-    <ion-img  src="/assets/spinner.gif"></ion-img>
+    <ion-img src="/assets/spinner.gif"></ion-img>
   </div>
   <div *ngIf="!spinner" id="container">
     <div class="tabela">
@@ -22,8 +25,8 @@
       </table>
     </div>
 
-    <p style="margin:10px;">
-      <strong style="color: rgb(0, 0, 0);"
+    <p style="margin: 10px">
+      <strong style="color: rgb(0, 0, 0)"
         >Qual Candidato representará o Brasil pelos próximos 4 anos?</strong
       >
     </p>
@@ -32,17 +35,28 @@
       <ion-radio-group #respostaGroup>
         <ion-item *ngFor="let candidato of listaDeCandidatos">
           <p style="color: black"><strong>{{candidato.nome}}</strong></p>
-          <ion-radio slot="start" (click)="habilitado = true" value="{{candidato.id}}"></ion-radio>
+          <ion-radio
+            slot="start"
+            (click)="habilitado = true"
+            value="{{candidato.id}}"
+          ></ion-radio>
         </ion-item>
       </ion-radio-group>
     </ion-list>
     <div class="enviar">
-      <ion-button (click)="registrarVoto(respostaGroup.value)" disabled={{!habilitado}}>Enviar</ion-button>
+      <ion-button
+        (click)="registrarVoto(respostaGroup.value)"
+        disabled="{{!habilitado}}"
+        >Enviar</ion-button
+      >
     </div>
 
     <div class="publicidade">
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1642001525444604"
-     crossorigin="anonymous"></script>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1642001525444604"
+        crossorigin="anonymous"
+      ></script>
     </div>
   </div>
 </ion-content>
