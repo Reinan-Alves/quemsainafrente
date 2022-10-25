@@ -48,7 +48,8 @@
         (click)="registrarVoto(respostaGroup.value)"
         disabled="{{!habilitado}}"
         >Enviar</ion-button
-      >
+      ><br />
+      <ion-button (click)="reload()">Atualizar resultados</ion-button>
     </div>
 
     <div class="publicidade">

@@ -37,15 +37,13 @@ export class HomePage implements OnInit {
     });
   }
   public alterarCandidato(candidato: Candidato) {
-    return (
-      this.candidatoService.atualizarCandidato(candidato).subscribe({
-        next: (res) => {
-          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-          alert('Realizado com sucesso'), res;
-        },
-        error: (err) => console.log(err),
-      })
-    );
+    return this.candidatoService.atualizarCandidato(candidato).subscribe({
+      next: (res) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        alert('Realizado com sucesso'), res, (this.reload());
+      },
+      error: (err) => console.log(err),
+    });
   }
   registrarVoto(valor: string) {
     //localStorage.setItem('votou', 'false');
@@ -64,7 +62,7 @@ export class HomePage implements OnInit {
         }
       });
       localStorage.setItem('votou', 'true');
-      location.reload();
+      //location.reload();
     } else {
       alert('Um voto por pessoa é o ideal para um resultado mais fiel');
     }
@@ -109,5 +107,8 @@ export class HomePage implements OnInit {
         i++;
       }, 0);
     });
+  }
+  reload(){
+    location.reload();
   }
 }
