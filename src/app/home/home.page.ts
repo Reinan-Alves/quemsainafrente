@@ -29,9 +29,9 @@ export class HomePage implements OnInit {
       this.calcularTotalDeVotos();
       this.calcularPercentualPorCandidato();
     }, 1000);
-    //  setTimeout(() => {
-    //   this. reload();
-    // }, 120000);
+      setTimeout(() => {
+      this. reload();
+     }, 120000);
   }
   public listarCandidatos() {
     return this.candidatoService.listarCandidatos().subscribe({
