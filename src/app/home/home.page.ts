@@ -51,25 +51,25 @@ export class HomePage implements OnInit {
   }
   registrarVoto(valor: string) {
     //localStorage.setItem('votou', 'false');
-    if (localStorage.getItem('votou') !== 'true') {
-      this.calcularTotalDeVotos();
-      this.habilitado = false;
-      let contador = 0;
-      const id = parseInt(valor, 10);
-      this.listaDeCandidatos.map((candidato) => {
-        // eslint-disable-next-line eqeqeq
-        if (id == candidato.id) {
-          contador = candidato.votos;
-          contador++;
-          candidato.votos = contador;
-          this.alterarCandidato(candidato);
-        }
-      });
-      localStorage.setItem('votou', 'true');
-      //location.reload();
-    } else {
-      alert('Um voto por pessoa é o ideal para um resultado mais fiel');
-    }
+    //if (localStorage.getItem('votou') !== 'true') {
+    this.calcularTotalDeVotos();
+    this.habilitado = false;
+    let contador = 0;
+    const id = parseInt(valor, 10);
+    this.listaDeCandidatos.map((candidato) => {
+      // eslint-disable-next-line eqeqeq
+      if (id == candidato.id) {
+        contador = candidato.votos;
+        contador++;
+        candidato.votos = contador;
+        this.alterarCandidato(candidato);
+      }
+    });
+    //localStorage.setItem('votou', 'true');
+    //location.reload();
+    // } else {
+    //alert('Um voto por pessoa é o ideal para um resultado mais fiel');
+    //}
   }
   calcularTotalDeVotos() {
     let acumulador = 0;

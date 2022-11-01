@@ -1,4 +1,5 @@
 #container {
+  background-image: url("/assets/bola.jpeg");
   text-align: center;
   position: absolute;
   left: 0;
@@ -9,7 +10,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  height:45%;
+  height: 45%;
 }
 
 #container strong {
@@ -21,7 +22,7 @@
   font-size: 16px;
   line-height: 22px;
 
-  color: #000000;
+  color: #ffffff;
 
   margin: 0;
 }
@@ -36,7 +37,7 @@ table {
   width: 100%;
   margin-bottom: 0.5em;
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin: auto;
   position: relative;
 }
@@ -44,7 +45,7 @@ th,
 td {
   padding: 0.7em;
   margin: 0;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(255, 254, 254);
   text-align: center;
   height: 100px;
 }
@@ -52,15 +53,23 @@ td {
   height: 50px;
 }
 th {
-  background-color: #1b85ff;
+  background-image: url("/assets/bola.jpeg");
   height: 40px;
 }
 .tabela {
+  text-shadow: #030304 0.1em 0.1em 0.2em;
   width: 100%;
-  background-color: #ffffff;
+  background-image: url("/assets/bola.jpeg");
 }
-.spinner{
+.spinner {
   margin: auto;
   width: 200px;
   height: 200px;
+}
+.titulo-enquete {
+  margin: 5px;
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: #030304 0.1em 0.1em 0.2em;
+  background-color: #00000031;
 }

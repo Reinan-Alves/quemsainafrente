@@ -4,45 +4,29 @@
   >
 </ion-header>
 <ion-content [fullscreen]="true">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1642001525444604"
-     crossorigin="anonymous"></script>
-<!-- fixo728x90 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-1642001525444604"
-     data-ad-slot="1808949340"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1642001525444604"
+    crossorigin="anonymous"
+  ></script>
+  <!-- fixo728x90 -->
+  <ins
+    class="adsbygoogle"
+    style="display: inline-block; width: 728px; height: 90px"
+    data-ad-client="ca-pub-1642001525444604"
+    data-ad-slot="1808949340"
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 
   <div *ngIf="spinner" class="spinner">
     <ion-img src="/assets/spinner.gif"></ion-img>
   </div>
   <div *ngIf="!spinner" id="container">
-    <div class="tabela">
-      <p><strong>Total de votos: {{totalDeVotos}}</strong></p>
-      <table>
-        <thead>
-          <tr>
-            <th>Candidato</th>
-            <th>Percentual</th>
-            <th>Colocação</th>
-          </tr>
-        </thead>
-
-        <tr *ngFor="let candidato of listaDeCandidatos">
-          <td>{{candidato.nome}}</td>
-          <td ngClass="tdPercentual">--</td>
-          <td ngClass="tdColocacao">--</td>
-        </tr>
-      </table>
-    </div>
-
-    <p style="margin: 10px">
-      <strong style="color: rgb(0, 0, 0)"
-        >Qual Candidato representará o Brasil pelos próximos 4 anos?</strong
-      >
-    </p>
+    <h1 class="titulo-enquete">
+      <strong>Quem são os favoritos na Copa do Mundo 2022?</strong>
+    </h1>
 
     <ion-list>
       <ion-radio-group #respostaGroup>
@@ -58,11 +42,32 @@
     </ion-list>
     <div class="enviar">
       <ion-button
+        color="success"
         (click)="registrarVoto(respostaGroup.value)"
         disabled="{{!habilitado}}"
         >Enviar</ion-button
       ><br />
-      <ion-button (click)="reload()">Atualizar resultados</ion-button>
+      <ion-button color="success" (click)="reload()"
+        >Atualizar resultados</ion-button
+      >
+    </div>
+    <div class="tabela">
+      <p><strong>Total de votos: {{totalDeVotos}}</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Seleção</th>
+            <th>Percentual</th>
+            <th>Colocação</th>
+          </tr>
+        </thead>
+
+        <tr *ngFor="let candidato of listaDeCandidatos">
+          <td>{{candidato.nome}}</td>
+          <td ngClass="tdPercentual">--</td>
+          <td ngClass="tdColocacao">--</td>
+        </tr>
+      </table>
     </div>
   </div>
 </ion-content>
