@@ -1,3 +1,4 @@
+import { Banner } from './../banner/banner';
 import { Candidato } from './model/candidato';
 import { Component, OnInit } from '@angular/core';
 import { CandidatoService } from './service/candidato.service';
@@ -12,12 +13,20 @@ export class HomePage implements OnInit {
     nome: '',
     votos: 0,
   };
+  banner: Banner;
   public listaDeCandidatos: Array<Candidato> = [];
   public exibirNumero: number | undefined;
   public totalDeVotos = 0;
   public habilitado = false;
   spinner = false;
-  constructor(private candidatoService: CandidatoService) {}
+  constructor(private candidatoService: CandidatoService) {
+    this.banner = new Banner(
+      'ca-pub-1642001525444604',
+      5890621007,
+      'auto',
+      true
+    );
+  }
 
   ngOnInit(): void {
     this.spinner = true;
@@ -29,9 +38,9 @@ export class HomePage implements OnInit {
       this.calcularTotalDeVotos();
       this.calcularPercentualPorCandidato();
     }, 1000);
-      setTimeout(() => {
-      this. reload();
-     }, 120000);
+    //   setTimeout(() => {
+    //   this. reload();
+    //  }, 120000);
   }
   public listarCandidatos() {
     return this.candidatoService.listarCandidatos().subscribe({
@@ -43,7 +52,7 @@ export class HomePage implements OnInit {
     return this.candidatoService.atualizarCandidato(candidato).subscribe({
       next: (res) => {
         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        alert('Realizado com sucesso'), res, (this.reload());
+        alert('Realizado com sucesso'), res, this.reload();
       },
       error: (err) => console.log(err),
     });
@@ -111,7 +120,7 @@ export class HomePage implements OnInit {
       }, 0);
     });
   }
-  reload(){
+  reload() {
     location.reload();
   }
 }

@@ -8,7 +8,7 @@ import { Candidato } from '../model/candidato';
 export class CandidatoService {
   public emitEvent = new EventEmitter();
 
-  private url = 'https://candidato-api-fake.herokuapp.com/';
+  private url = 'http://reinan1971.c41.integrator.host/';
 
   constructor(private http: HttpClient) {}
 
@@ -19,7 +19,7 @@ export class CandidatoService {
   };
 
   public listarCandidatos(): Observable<Array<Candidato>> {
-    return this.http.get<Array<Candidato>>(`${this.url}candidato`).pipe(
+    return this.http.get<Array<Candidato>>(`${this.url}candidatos`).pipe(
       (res) => res,
       (error) => error
     );
@@ -27,7 +27,7 @@ export class CandidatoService {
   public cadastrarCandidatos(candidato: Candidato): Observable<Candidato> {
     return this.http
       .post<Candidato>(
-        `${this.url}cadidato`,
+        `${this.url}cadidatos`,
         JSON.stringify(candidato),
         this.httpOptions
       )
@@ -39,7 +39,7 @@ export class CandidatoService {
   public removerCandidato(candidato: Candidato): Observable<Candidato> {
     return this.http
       .post<Candidato>(
-        `${this.url}cadidato/${candidato.id}`,
+        `${this.url}cadidatos/${candidato.id}`,
         JSON.stringify(candidato),
         this.httpOptions
       )
@@ -51,7 +51,7 @@ export class CandidatoService {
   public atualizarCandidato(candidato: Candidato): Observable<Candidato> {
     return this.http
       .put<Candidato>(
-        `${this.url}candidato/${candidato.id}`,
+        `${this.url}candidatos/${candidato.id}`,
         JSON.stringify(candidato),this.httpOptions
       )
       .pipe(

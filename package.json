@@ -25,6 +25,7 @@
     "@capacitor/keyboard": "4.0.1",
     "@capacitor/status-bar": "4.0.1",
     "@ionic/angular": "^6.1.9",
+    "angular-google-adsense": "^0.6.0",
     "chart.js": "^3.9.1",
     "ionicons": "^6.0.3",
     "ng2-charts": "^4.0.1",
