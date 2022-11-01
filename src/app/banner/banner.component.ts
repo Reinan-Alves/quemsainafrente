@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { Banner } from './banner';
 @Component({
   selector: 'app-banner',
