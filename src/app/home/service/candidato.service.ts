@@ -8,7 +8,7 @@ import { Candidato } from '../model/candidato';
 export class CandidatoService {
   public emitEvent = new EventEmitter();
 
-  private url = ' https://reinan1971.c41.integrator.host/';
+  private url = ' http://reinan1971.c41.integrator.host/';
 
   constructor(private http: HttpClient) {}
 
