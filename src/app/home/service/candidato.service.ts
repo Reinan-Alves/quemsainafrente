@@ -19,7 +19,7 @@ export class CandidatoService {
   };
 
   public listarCandidatos(): Observable<Array<Candidato>> {
-    return this.http.get<Array<Candidato>>(`${this.url}candidatos`).pipe(
+    return this.http.get<Array<Candidato>>(`${this.url}candidatos/`).pipe(
       (res) => res,
       (error) => error
     );
