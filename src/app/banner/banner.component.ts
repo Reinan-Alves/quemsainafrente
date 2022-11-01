@@ -8,7 +8,7 @@ import { Banner } from './banner';
 })
 export class BannerComponent implements AfterViewInit {
   @Input() banner: Banner;
-  showAd = environment.adsense.show;
+  showAd = true;
   constructor() {}
 
   ngAfterViewInit() {
