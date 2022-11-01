@@ -8,7 +8,7 @@ import { Candidato } from '../model/candidato';
 export class CandidatoService {
   public emitEvent = new EventEmitter();
 
-  private url = ' http://reinan1971.c41.integrator.host/';
+  private url = 'www.reinan1971.c41.integrator.host/';
 
   constructor(private http: HttpClient) {}
 
@@ -19,7 +19,7 @@ export class CandidatoService {
   };
 
   public listarCandidatos(): Observable<Array<Candidato>> {
-    return this.http.get<Array<Candidato>>(`${this.url}candidatos/`).pipe(
+    return this.http.get<Array<Candidato>>(`${this.url}candidatos`).pipe(
       (res) => res,
       (error) => error
     );
