@@ -4,25 +4,17 @@
   >
 </ion-header>
 <ion-content [fullscreen]="true">
-  <div class="publicidade">
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1642001525444604"
-      crossorigin="anonymous"
-    ></script>
-    <!-- bloco02 -->
-    <ins
-      class="adsbygoogle"
-      style="display: block"
-      data-ad-client="ca-pub-1642001525444604"
-      data-ad-slot="3449070745"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    ></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1642001525444604"
+     crossorigin="anonymous"></script>
+<!-- fixo728x90 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-1642001525444604"
+     data-ad-slot="1808949340"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
   <div *ngIf="spinner" class="spinner">
     <ion-img src="/assets/spinner.gif"></ion-img>
   </div>
@@ -71,10 +63,6 @@
         >Enviar</ion-button
       ><br />
       <ion-button (click)="reload()">Atualizar resultados</ion-button>
-    </div>
-
-    <div class="publicidade">
-      <app-banner [banner]="banner"></app-banner>
     </div>
   </div>
 </ion-content>

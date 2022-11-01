@@ -1,4 +1,3 @@
-import { Banner } from './../banner/banner';
 import { Candidato } from './model/candidato';
 import { Component, OnInit } from '@angular/core';
 import { CandidatoService } from './service/candidato.service';
@@ -13,20 +12,13 @@ export class HomePage implements OnInit {
     nome: '',
     votos: 0,
   };
-  banner: Banner;
+
   public listaDeCandidatos: Array<Candidato> = [];
   public exibirNumero: number | undefined;
   public totalDeVotos = 0;
   public habilitado = false;
   spinner = false;
-  constructor(private candidatoService: CandidatoService) {
-    this.banner = new Banner(
-      'ca-pub-1642001525444604',
-      5890621007,
-      'auto',
-      true
-    );
-  }
+  constructor(private candidatoService: CandidatoService) {}
 
   ngOnInit(): void {
     this.spinner = true;
