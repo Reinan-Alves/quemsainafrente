@@ -1,3 +1,4 @@
+import { FooterComponent } from './../footer/footer.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
@@ -19,6 +20,6 @@ import { HomePageRoutingModule } from './home-routing.module';
       adSlot: 1808949340,
     })
   ],
-  declarations: [HomePage]
+  declarations: [HomePage,FooterComponent]
 })
 export class HomePageModule {}

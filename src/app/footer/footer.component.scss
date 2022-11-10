@@ -1,0 +1,32 @@
+.footer {
+  background-color: rgb(255, 255, 255);
+  color: gray;
+  margin-top: 10px;
+  border-top: 1px solid rgb(0, 0, 0);
+}
+
+.footer__copyright {
+  text-align: center;
+
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  color: gray;
+  margin-top: 10px;
+  border-top: 1px dashed rgb(0, 0, 0);
+}
+
+.footer__title {
+  font-weight: bold;
+  color: rgb(56, 56, 56);
+}
+
+.footer__about-text {
+  text-align: center;
+}
+
+.sociais {
+  margin-bottom: 10px;
+}
+.sociais a{
+  margin: 10px;
+}
