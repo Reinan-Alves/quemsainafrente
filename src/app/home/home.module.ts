@@ -1,3 +1,4 @@
+import { PoliticaComponent } from './../politica/politica.component';
 import { FooterComponent } from './../footer/footer.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -20,6 +21,6 @@ import { HomePageRoutingModule } from './home-routing.module';
       adSlot: 1808949340,
     })
   ],
-  declarations: [HomePage,FooterComponent]
+  declarations: [HomePage,FooterComponent,PoliticaComponent]
 })
 export class HomePageModule {}

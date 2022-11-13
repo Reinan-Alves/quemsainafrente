@@ -1,3 +1,4 @@
+import { PoliticaComponent } from './politica/politica.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -10,6 +11,9 @@ const routes: Routes = [
     path: '',
     redirectTo: '',
     pathMatch: 'full'
+  },
+  {
+    path: 'politica', component: PoliticaComponent
   },
 ];
 
